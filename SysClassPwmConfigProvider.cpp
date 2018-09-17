@@ -4,7 +4,7 @@
 SysClassPwmConfigProvider::SysClassPwmConfigProvider(const string& pwmRootFolderPath, int8_t pwmNumber)
         : pwmRootFolderPath(pwmRootFolderPath), pwmNumber(pwmNumber)
 {
-    this->pwmControlForderPath = this->pwmRootFolderPath + "/"
+    this->pwmControlFolderPath = this->pwmRootFolderPath + "/"
             + this->PWM_CHANNEL_SUBPATH_TEMPLATE + to_string(this->pwmNumber) + "/";
 }
 
@@ -15,16 +15,16 @@ string SysClassPwmConfigProvider::GetResourceRequestPath(bool toClose)
 
 string SysClassPwmConfigProvider::GetDutyPath()
 {
-    return this->pwmControlForderPath + this->DUTY_CYCLE_PARAM_NAME;
+    return this->pwmControlFolderPath + this->DUTY_CYCLE_PARAM_NAME;
 }
 
 string SysClassPwmConfigProvider::GetEnablePath()
 {
-    return this->pwmControlForderPath + this->ENABLE_AND_DISABLE_PARAM_NAME;
+    return this->pwmControlFolderPath + this->ENABLE_AND_DISABLE_PARAM_NAME;
 }
 
 string SysClassPwmConfigProvider::GetPeriodPath() {
-    return this->pwmControlForderPath + this->PERIOD_PARAM_NAME;
+    return this->pwmControlFolderPath + this->PERIOD_PARAM_NAME;
 }
 
 string SysClassPwmConfigProvider::GetAcquireValue() {

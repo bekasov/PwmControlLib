@@ -8,13 +8,13 @@
 
 using namespace std;
 
-class SysClassPwmConfigProvider : public IPwmDriverConfigProvider
+class SysClassPwmConfigProvider final : public IPwmDriverConfigProvider
 {
 private:
     string pwmRootFolderPath;
     int8_t pwmNumber;
 
-    string pwmControlForderPath;
+    string pwmControlFolderPath;
 
 public:
     SysClassPwmConfigProvider(const string &pwmRootFolderPath, int8_t pwmNumber);

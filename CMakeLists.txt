@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Pwm
         main.cpp
-        SysClassPwmConfigProvider.cpp)
+        SysClassPwmConfigProvider.cpp
+        PwmInterface.cpp)
