@@ -9,6 +9,7 @@ PwmInterface::PwmInterface(uint8_t pwmNumber, uint32_t period, unique_ptr<IPwmDr
 void PwmInterface::Open()
 {
     this->writeToFile(this->config->GetResourceRequestPath(false), this->config->GetAcquireValue());
+    this->writeToFile(this->config->GetPeriodPath(), this->period);
 }
 
 void PwmInterface::Close()
